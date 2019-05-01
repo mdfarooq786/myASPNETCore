@@ -19,6 +19,8 @@ namespace myASPNETCore
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            // FRQ: Enable SLL Security.
+            .UseSetting("https_port", "443")
+            .UseStartup<Startup>();
     }
 }

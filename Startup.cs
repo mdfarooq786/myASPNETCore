@@ -49,6 +49,7 @@ namespace myASPNETCore
                 app.UseHsts();
             }
 
+            // FRQ: Enable SLL Security.
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
